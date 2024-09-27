@@ -36,7 +36,7 @@ private val listOfAccounts: List<SuggestedAccount>,
         val currAccount=listOfAccounts[position]
         holder.email.text=currAccount.userEmail
         Glide.with(context)
-            .load(currAccount)
+            .load(currAccount.profileImage)
             .into(holder.image)
         holder.followBtn.setOnClickListener {
   clickListener.onFollowClicked(currAccount.uid)

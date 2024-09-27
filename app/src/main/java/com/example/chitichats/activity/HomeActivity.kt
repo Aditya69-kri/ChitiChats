@@ -31,7 +31,7 @@ class HomeActivity : AppCompatActivity() {
         TabLayoutMediator(tabLayout,viewPager){ tab:TabLayout.Tab,position:Int->
             when(position){
                 0->tab.text="Accounts"
-                else->tab.text="Tweets"
+                else->tab.text="Chats"
             }
         }.attach()
         fabTweet.setOnClickListener {

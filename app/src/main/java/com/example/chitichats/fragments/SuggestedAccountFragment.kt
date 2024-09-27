@@ -78,7 +78,6 @@ class SuggestedAccountFragment:Fragment(),SuggestedAccountAdapter.ClickListener 
                       .child("listOfFollowings").setValue(listOfFollowing)
                   Toast.makeText(requireContext(),"Followed Sussfully",Toast.LENGTH_SHORT).show()
               }
-
               override fun onCancelled(error: DatabaseError) {
                //   TODO("Not yet implemented")
               }
