@@ -40,7 +40,7 @@
             android:id="@+id/btn_follow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Follow"
+            android:text="Invite"
             android:layout_marginTop="6dp"
 />
 </LinearLayout>
