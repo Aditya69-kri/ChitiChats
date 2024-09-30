@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Button
+import android.widget.Toolbar
 import com.bumptech.glide.Glide
 import com.example.chitichats.R
 import com.google.firebase.Firebase
@@ -21,10 +22,14 @@ import java.util.UUID
 class ProfileActivity : AppCompatActivity() {
     private lateinit var profileImage:CircleImageView
     private lateinit var openGalleryBtn:Button
+    private lateinit var toolbar:androidx.appcompat.widget.Toolbar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
         init()
+        toolbar.setNavigationOnClickListener {
+            finish()
+        }
         openGalleryBtn.setOnClickListener {
             val galleryIntent= Intent(Intent.ACTION_PICK,MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             startActivityForResult(galleryIntent,101)
@@ -55,7 +60,7 @@ class ProfileActivity : AppCompatActivity() {
     private fun init(){
         profileImage=findViewById(R.id.profile_image)
         openGalleryBtn=findViewById(R.id.btn_open_gallary)
-
+        toolbar=findViewById(R.id.toolbar)
         FirebaseDatabase.getInstance().reference.child("users").child(Firebase.auth.uid.toString())
             .addListenerForSingleValueEvent(object :ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
