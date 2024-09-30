@@ -9,16 +9,16 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:layout_width="413dp"
+        android:layout_height="58dp"
+        android:background="@drawable/purpleback"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:title="Profile"
-        app:titleTextColor="@android:color/white"
-        app:navigationIcon="@drawable/ic_arrow_back"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="Profile"
+        app:titleTextColor="@android:color/white" />
 
 
     <de.hdodenhof.circleimageview.CircleImageView
